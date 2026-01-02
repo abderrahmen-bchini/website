@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>welcome !</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="png/jpg" href="pics/laptop.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <canvas id="pixel-bg"></canvas>
+  <header class="header">
+    <div class="dropdown-menu">
+      <!-- Trigger -->
+      <button class="trigger" aria-haspopup="true" aria-expanded="false">
+        <svg class="trigger-icon" viewBox="0 0 16 20" aria-hidden="true">
+          <rect x="0" y="0" width="4" height="4" />
+          <rect x="4" y="4" width="4" height="4" />
+          <rect x="8" y="8" width="4" height="4" />
+          <rect x="4" y="12" width="4" height="4" />
+          <rect x="0" y="16" width="4" height="4" />
+        </svg>
+
+      </button>
+
+      <!-- Dropdown -->
+      <ul class="menu">
+        <li class="menu-item">
+          <span>Theme</span>
+          <label class="switch">
+            <input type="checkbox" id="themetoggle">
+            <span class="track">
+              <span class="knob"></span>
+            </span>
+          </label>
+        </li>
+
+        <li class="menu-item"><a href="#about">About</a></li>
+        <li class="menu-item"><a href="#projects">Projects</a></li>
+        <li class="menu-item"><a href="#skills">Skills</a></li>
+        <li class="menu-item"><a href="#">Contacts</a></li>
+      </ul>
+    </div>
+    <div class="profile">
+      <img src="pics/profile_picture.png" alt="Abderrahmen Bchini" class="profile-img">
+      <nav class="contacts">
+        <a href="https://github.com/abderrahmen-bchini" target="_blank" aria-label="GitHub" class="social-link">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:abderrahmen.bchini24@gmail.com" target="_blank" aria-label="Email" class="social-link">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abderrahmen-bchini-33957a388/" target="_blank" aria-label="LinkedIn"
+          class="social-link">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </nav>
+
+    </div>
+  </header>
+  <script src="script.js"></script>
+  <h1 id="about">About {</h1>
+  <div class="about">
+    <h3 style="font-weight: bold;">I'm Abderrahmen Bchini ,</h3>
+    <p>I'm a software engineering graduate that's intrested in cybersecurity ...</p>
+  </div>
+  <div class="circle-container">
+    <div class="outer-circle">
+      <div class="inner-circle"></div>
+    </div>
+    <h2 style="font-weight: bold;">Education :</h2>
+  </div>
+
+  <div class="vertical-line">
+    <ul>
+      <li><strong>Bachelor’s Degree in Software Engineering</strong>, MUST University ( 2023 - 2026 )</li>
+      <li><strong>Baccalauréat in Mathematics </strong> tunis,Tunisia ( 2023 )</li>
+    </ul>
+  </div>
+  <div class="circle-container">
+    <div class="outer-circle">
+      <div class="inner-circle"></div>
+    </div>
+    <h2 style="font-weight: bold;">Projects</h2>
+  </div>
+  <div class="vertical-line">
+    <ul>
+      <li><strong>Student Quiz Platform</strong></li>
+    </ul>
+  </div>
+
+  <div class="circle-container">
+    <div class="outer-circle">
+      <div class="inner-circle"></div>
+    </div>
+    <h2 style="font-weight: bold;">Experience<h2>
+  </div>
+
+  <div class="vertical-line">
+    <ul>
+      <li><strong>Student Quiz Platform - Pratik.tn </strong>( 2023 - 2024 ) </li>
+      <li><strong>Dashbord Platform for e-commerce company - internship</strong> ( 15 / 07 / 2025 - 19 / 08 /2025 )
+      </li>
+    </ul>
+  </div>
+  <div class="circle-container">
+    <div class="outer-circle">
+      <div class="inner-circle"></div>
+    </div>
+    <h2>Certificates :</h2>
+  </div>
+  <div class="vertical-line-container">
+    <div class="vertical-line">
+      <ul>
+        <li><strong>Cisco Networking Academy : Cybersecurity Essentials </strong>( Ongoing )</li>
+        <li><strong> Google Cybersecurity Professional Certificate </strong>( Ongoing )</li>
+      </ul>
+    </div>
+    <div class="circle-container">
+      <div class="outer-circle">
+        <div class="inner-circle"></div>
+      </div>
+      <h2>Languages :</h2>
+    </div>
+    <div class="vertical-line-container">
+      <div class="vertical-line">
+        <ul>
+          <li><strong>English</strong></li>
+          <li><strong>Frensh</strong></li>
+          <li><strong>Arabic</strong></li>
+        </ul>
+      </div>
+      <div class="down-arrow">
+        <img src="pics/arrow_back_2_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" class="end-arrow">
+      </div>
+    </div>
+    <h1>};</h1>
+    <br>
+    <span id="projects"></span>
+    <h1>Projects {</h1>
+    <div class="circle-container">
+      <div class="outer-circle">
+        <div class="inner-circle"></div>
+      </div>
+      <h2>Quiz Platform :</h2>
+    </div>
+    <div class="vertical-line-container">
+      <div class="vertical-line">
+        <ul>
+          <li class="project">
+            <p>
+              This was my <strong>second-year web development project</strong>: a
+              <strong>web-based quiz platform</strong> that allows users to
+              <strong>log in</strong>, <strong>select categories</strong>, and take
+              <strong>timed quizzes</strong>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Built using <strong>HTML</strong>, <strong>CSS</strong>, and
+              <strong>JavaScript</strong> for the frontend, with <strong>PHP</strong> and
+              <strong>MySQL</strong> for <strong>authentication</strong> and
+              <strong>data storage</strong>. I focused on <strong>clean UI flow</strong>,
+              <strong>input validation</strong>, and <strong>separation of frontend and backend logic</strong>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Security measures</strong> included <strong>server-side input sanitization</strong>
+              to mitigate <strong>SQL injection</strong> and <strong>password hashing</strong>
+              to protect user credentials in case of a <strong>database breach</strong>.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="circle-container">
+        <div class="outer-circle">
+          <div class="inner-circle"></div>
+        </div>
+        <h2>Arch Linux Configuration & Automation :</h2>
+      </div>
+      <div class="vertical-line-container">
+        <div class="vertical-line">
+          <ul>
+            <li class="project">
+              <p>
+              <strong>My Arch Linux System </strong>is a long-term personal project focused on building a 
+              <strong>minimal, performant Linux environment</strong> from the ground up.
+              </p>
+            </li>
+            <li class="project">
+              <p>
+              I configured the system manually, managing <strong>bootloader</strong>, 
+              <strong>system services</strong>, <strong>networking</strong>, and 
+              <strong>hardware drivers</strong>, with an emphasis on <strong>stability</strong> 
+              and <strong>resource efficiency</strong>.
+              </p>
+            </li>
+            <li class="project">  
+              <p>
+                I developed <strong>Bash scripts</strong> to automate system tasks such as 
+                <strong>environment setup</strong>, <strong>theme switching</strong>, 
+                <strong>package management</strong>, <strong> battery monitoring</strong> and <strong>system maintenance</strong>, 
+                improving consistency and reducing manual configuration.
+              </p>
+            </li>
+            <li class="project">
+              <p>
+                This project deepened my understanding of <strong>Linux internals</strong>, 
+                <strong>process management</strong>, <strong>file systems</strong>, and 
+                <strong>shell scripting</strong>, and led to <strong>contributions to open-source tools</strong> 
+                and active participation in the <strong>Linux community</strong>.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="down-arrow">
+        <img src="pics/arrow_back_2_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" class="end-arrow">
+        </div>
+      </div>
+      <h1>};</h1>
+      <span id="skills"></span>
+      <h1>Skills {</h1>
+      <div></div>
+      <h1>};</h1>
+</body>
+
+</html>
