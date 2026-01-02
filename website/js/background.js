@@ -26,17 +26,14 @@ for (let i = 0; i < pixelCount; i++) {
 }
 
 // Update pixel colors based on theme
-function updatePixelColors() {
+export function updatePixelColors() {
   const isLight = document.body.classList.contains('light');
   pixels.forEach(pixel => {
-    if (isLight) {
-      pixel.color = `rgba(0,0,0,${Math.random()})`; // black in light mode
-    } else {
-      pixel.color = `rgba(255,255,255,${Math.random()})`; // white in dark mode
-    }
+    pixel.color = isLight
+      ? `rgba(0,0,0,${Math.random()})`   // black in light mode
+      : `rgba(255,255,255,${Math.random()})`; // white in dark mode
   });
 }
-
 // Initial color assignment
 updatePixelColors();
 

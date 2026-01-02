@@ -1,6 +1,7 @@
 // =========================
 // THEME TOGGLE & DROPDOWN
 // =========================
+import { updatePixelColors } from "./background.js";
 const toggle = document.getElementById("themetoggle");
 const dropdown = document.querySelector(".dropdown-menu");
 const trigger = dropdown.querySelector(".trigger");
