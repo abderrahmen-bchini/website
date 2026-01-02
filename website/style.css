@@ -458,7 +458,7 @@ a:focus {
   overflow-y: auto;
   font-size: 1rem;
   text-align: left;
-}
+ }
 
 /* Title */
 .shortcut-window h2 {
@@ -466,6 +466,7 @@ a:focus {
   margin-bottom: 1rem;
   font-size: 1.3rem;
   color: var(--title-color);
+  text-align: center;
 }
 
 /* List */
@@ -492,4 +493,29 @@ kbd {
   font-family: pixel;
   font-size: 0.9rem;
   text-align: center;
+}
+.shortcut-toast {
+  position: fixed;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  font-family: pixel;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px var(--shadow-color);
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeInOut 4s forwards;
+  z-index: 10000;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
 }
