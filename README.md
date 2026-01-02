@@ -1,7 +1,7 @@
 # Portfolio Website
 
 ## Description
-This is the codebase for my personal portfolio website. I created this website to showcase my projects, skills, and experiences. The goal of this project is to provide a clean, modern, and responsive interface that highlights my work and personal achievement .
+This is the codebase for my personal portfolio website. I created this website to showcase my projects, skills, and experiences. The goal of this project is to provide a clean, modern, and responsive interface that highlights my work and personal achievement.
 
 ## Features
 - **Responsive Design**: Works smoothly only on desktops (for now hhh )
