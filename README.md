@@ -19,4 +19,5 @@ This is the codebase for my personal portfolio website. I created this website t
 ## Installation
 1. Clone this repository:
   ```bash
-   git clone git@github.com:abderrahmen-bchini/website.git ```
+   git clone git@github.com:abderrahmen-bchini/website.git
+```
