@@ -117,7 +117,50 @@ a:hover , button:hover ,nav:hover , .switch:hover , .knob:hover , .menu:hover , 
   overflow: hidden;
 
 }
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  font-family: pixel;
+  font-size: 24px;
+  padding: 14px 22px;
 
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+
+  box-shadow: 0 3px 10px var(--shadow-color);
+
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+
+/* Hover */
+.download-button:hover {
+  color: var(--switch-active);
+  border-color: var(--switch-active);
+  box-shadow: 0 0 12px var(--switch-active);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* SVG animation */
+.download-button:hover .download-svg {
+  transform: translateY(2px);
+}
+
+/* Click */
+.download-button:active {
+  transform: translateY(0) scale(1);
+  box-shadow: 0 0 6px var(--shadow-color);
+}
 .contacts {
   display: flex;
   width: 100%;
