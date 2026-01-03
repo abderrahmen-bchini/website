@@ -19,7 +19,7 @@ html{
   --circle-outer-border: #ffffff;
   --circle-inner-bg: #ffffff;
   --switch-bg: #555555;
-  --switch-active: #00ffff;
+  --switch-active: #d29922;
 }
 
 /* ----- LIGHT MODE ----- */
@@ -37,7 +37,7 @@ body.light {
   --circle-inner-bg: #353330;
 
   --switch-bg: #bbbbbb;
-  --switch-active: #555555;
+  --switch-active: #8a5a14;
 }
 
 /* =========================
@@ -458,7 +458,28 @@ a:focus {
   overflow-y: auto;
   font-size: 1rem;
   text-align: left;
+  animation: bounce 500ms forwards ;
  }
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(30px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-6px);
+  }
+
+  80% {
+    transform: scale(0.98) translateY(3px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
 
 /* Title */
 .shortcut-window h2 {
@@ -518,4 +539,147 @@ kbd {
   10% { opacity: 1; }
   90% { opacity: 1; }
   100% { opacity: 0; }
+}
+/* =========================
+   FOOTER
+========================= */
+
+.footer-container {
+  margin-top: 100px;
+  padding-top: 40px;
+  border-top: 2px solid var(--border-color);
+}
+.footerclass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  font-family: pixel;
+  font-size: 22px;
+}
+
+/* Social icons */
+.footer-link {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 30px;
+  margin: 0 40px;     
+  margin-top: 5px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.footer-link:hover {
+  text-decoration: none;
+  color: var(--switch-active);
+  transform: translateY(-3px) scale(1.1);
+}
+.footer-link:active{
+  transform: translateY(0) scale(1);
+  text-shadow: none;
+}
+.footer-link:focus{
+  outline: none;        
+  color: var(--text-color); 
+  text-shadow: none;  
+}
+
+/* Copyright */
+.copyright {
+  margin-top: 10px;
+  font-size: 20px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.myname {
+  font-weight: bold;
+  color: var(--switch-active);
+}
+
+/* =========================
+   INPUT FIELD (PIXEL STYLE)
+   ========================= */
+
+.input-field {
+  font-family: pixel;
+  font-size: 22px;
+  width: 50vw;
+  height: 80px;
+  padding: 8px 12px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  box-shadow: 0 0 6px var(--shadow-color);
+  outline: none;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Focus effect */
+.input-field:focus {
+  border-color: var(--switch-active);
+  box-shadow: 0 0 8px var(--switch-active);
+}
+
+/* Placeholder text */
+.input-field::placeholder {
+  color: var(--border-color);
+  opacity: 0.7;
+}
+
+/* Optional hover effect */
+.input-field:hover {
+  border-color: var(--switch-active);
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+form button {
+
+  font-family: pixel;
+  font-size: 22px;
+  padding: 12px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 0 6px var(--shadow-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Hover effect */
+form button:hover {
+  border-color: var(--switch-active);
+  box-shadow: 0 0 8px var(--switch-active);
+  transform: translateY(-2px) scale(1.05);
+  color: var(--switch-active);
+}
+
+/* Active / click effect */
+form button:active {
+  transform: translateY(0) scale(1);
+  box-shadow: 0 0 6px var(--shadow-color);
+}
+
+@media (max-width:1000px) {
+  .profile{
+    display: none;
+  }
 }
