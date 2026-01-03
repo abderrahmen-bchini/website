@@ -426,12 +426,23 @@ ul {
   image-rendering: pixelated;
   display: block;
 }
-
-.down-arrow {
+.down-arrow .end-arrow {
   margin-left: 70px;
   padding: 0;
   margin-top: -5px;
+  display: none; /* hide by default */
 }
+
+/* Show dark arrow when NOT in light mode */
+body:not(.light) .down-arrow .end-arrow:first-child {
+  display: inline-block;
+}
+
+/* Show light arrow when in light mode */
+body.light .down-arrow .end-arrow:last-child {
+  display: inline-block;
+}
+
 
 /* Base link style */
 a {
