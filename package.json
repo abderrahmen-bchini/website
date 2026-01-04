@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "This is the codebase for my personal portfolio website. I created this website to showcase my projects, skills, and experiences. The goal of this project is to provide a clean, modern, and responsive interface that highlights my work and personal achievement.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abderrahmen-bchini/website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/abderrahmen-bchini/website/issues"
+  },
+  "homepage": "https://github.com/abderrahmen-bchini/website#readme",
+  "dependencies": {
+    "resend": "^6.6.0"
+  }
+}
