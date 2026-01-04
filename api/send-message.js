@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
   const { message } = req.body;
 
-  if (!message) {
+  if (!message || message.trim().length === 0) {
     return res.status(400).json({ error: "Message is required" });
   }
 
@@ -18,12 +18,15 @@ export default async function handler(req, res) {
       from: "Website <onboarding@resend.dev>",
       to: "abderrahmen.bchini24@gmail.com",
       subject: "New Website Message",
-      html: `<p>${message}</p>`,
+      html: `
+        <h3>New message from your website</h3>
+        <p>${message}</p>
+      `,
     });
 
-    res.status(200).json({ success: true });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Failed to send email" });
+    return res.status(200).json({ success: true });
+  } catch (err) {
+    console.error("Resend error:", err);
+    return res.status(500).json({ error: "Email failed" });
   }
 }

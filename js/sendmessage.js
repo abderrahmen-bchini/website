@@ -5,7 +5,7 @@ form.addEventListener("submit", async (e) => {
 
   const message = form.message.value;
 
-  const res = await fetch("/api/send-email", {
+  const res = await fetch("/api/send-message", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message }),
