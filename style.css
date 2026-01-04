@@ -731,6 +731,51 @@ form button:active {
   transform: translateY(0) scale(1);
   box-shadow: 0 0 6px var(--shadow-color);
 }
+/* =========================
+   FORM TOAST (PIXEL STYLE)
+========================= */
+.form-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.95);
+  background: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--border-color);
+  box-shadow: 0 0 10px var(--shadow-color);
+  padding: 12px 20px;
+  font-family: pixel;
+  font-size: 20px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10000;
+}
+
+.form-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Success */
+.form-toast.success {
+  border-color: var(--switch-active);
+  box-shadow: 0 0 12px var(--switch-active);
+}
+
+/* Error */
+.form-toast.error {
+  border-color: #ea4335;
+  box-shadow: 0 0 12px #ea4335;
+}
+
+/* Input error state */
+.input-field.error {
+  border-color: #ea4335;
+  box-shadow: 0 0 8px #ea4335;
+}
+
 
 @media (max-width:1000px) {
   .profile{
