@@ -57,7 +57,7 @@ body.light {
    ========================= */
 
 body {
-  cursor: url(pics/cursor/pixel-cursor.png) 4 0 , auto;
+  cursor: url(pics/cursor/pixel-cursor.png) 2 0 , auto;
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 15px;
