@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 html{
   scroll-behavior: smooth;
 }
@@ -775,10 +778,137 @@ form button:active {
   border-color: #ea4335;
   box-shadow: 0 0 8px #ea4335;
 }
+/* =========================
+   MOBILE RESPONSIVENESS
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Prevent overflow issues */
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Base scaling */
+  body {
+    font-size: 18px;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  /* Headings scale */
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  /* Mobile profile fix: smaller & aligned with menu */
+  .profile {
+    position: absolute;
+    top: 20px;              /* same visual level as menu */
+    right: 20px;
+
+    width: 90px;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 5;             /* below dropdown menu */
+  }
+
+  .profile-img {
+    display: none;
+  }
+
+  .profile .contacts {
+    display: none;
+  }
+
+  /* Smaller download button */
+/* Mobile download button – fixed size & proportions */
+  .download-button {
+    font-size: 16px;
+    padding: 10px 12px;
+    margin-top: 8px;
+    margin-left: 5px;
+    width: 100%;
+    max-width: 140px;
+    text-align: center;
+  }
 
 
-@media (max-width:1000px) {
-  .profile{
+
+  /* About section spacing */
+  .about {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  /* Vertical timeline fixes */
+  .vertical-line {
+    margin-left: 20px;
+    margin-right: 0;
+  }
+
+  .outer-circle {
+    margin-left: 11px;
+    border: 3px solid var(--circle-outer-border);
+  }
+  .inner-circle{
+    width: 5px;
+    height: 5px;
+    border: 3px solid var(--circle-inner-bg);
+  }
+
+  /* Dropdown menu touch-friendly */
+  .menu {
+    left: 0;
+    top: 120%;
+    min-width: 220px;
+  }
+
+  /* Footer icons spacing */
+  .footer-link {
+    margin: 0 20px;
+  }
+
+  /* Form responsiveness */
+  .input-field {
+    width: 90vw;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  form button {
+    width: 90vw;
+    font-size: 20px;
+  }
+
+  /* Toast scaling */
+  .form-toast,
+  .shortcut-toast {
+    font-size: 16px;
+    padding: 10px 16px;
+  }
+
+  /* Reduce excessive arrows spacing */
+  .down-arrow .end-arrow {
+    margin-left: 9px;
+  }
+}
+@media (max-width : 1592px){
+  .profile-img{
+    display: none;
+  }
+  .profile .contacts {
     display: none;
   }
 }
