@@ -904,7 +904,7 @@ form button:active {
     margin-left: 9px;
   }
 }
-@media (max-width : 1592px){
+@media (max-width : 1591px){
   .profile-img{
     display: none;
   }
