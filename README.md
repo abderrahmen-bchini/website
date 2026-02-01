@@ -4,7 +4,7 @@
 This is the codebase for my personal portfolio website. I created this website to showcase my projects, skills, and experiences. The goal of this project is to provide a clean, modern, and responsive interface that highlights my work and personal achievement.
 
 ## Features
-- **Responsive Design**: Works smoothly only on desktops (for now hhh )
+- **Responsive Design**: Works smoothly on desktops , mobile and every display option. 
 - **About Me Section**: A brief introduction about myself.
 - **Projects Section**: Showcases my projects with descriptions, technologies used, and links.
 - **Skills Section**: Highlights my technical and professional skills.
