@@ -893,8 +893,7 @@ form button:active {
   }
 
   /* Toast scaling */
-  .form-toast,
-  .shortcut-toast {
+  .form-toast {
     font-size: 16px;
     padding: 10px 16px;
   }
