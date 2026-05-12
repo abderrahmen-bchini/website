@@ -47,7 +47,7 @@ body.light {
 
 @font-face {
   font-family: pixel;
-  src: url(fonts/Pixelbasel-zr5Ll.ttf);
+  src: url(fonts/JetBrainsMono-Medium.ttf);
 }
 
 /* =========================
@@ -62,7 +62,7 @@ body {
   border: 2px solid var(--border-color);
   box-shadow: 0 0 10px var(--shadow-color);
   font-family: pixel;
-  font-size: 30px;
+  font-size: 25px;
   padding: 50px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -124,7 +124,7 @@ a:hover , button:hover ,nav:hover , .switch:hover , .knob:hover , .menu:hover , 
   gap: 10px;
   margin: 10px;
   font-family: pixel;
-  font-size: 24px;
+  font-size: 20px;
   padding: 14px 22px;
 
   background-color: var(--bg-color);
@@ -703,7 +703,7 @@ form{
 form button {
 
   font-family: pixel;
-  font-size: 22px;
+  font-size: 20px;
   padding: 12px 20px;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -746,7 +746,7 @@ form button:active {
   box-shadow: 0 0 10px var(--shadow-color);
   padding: 12px 20px;
   font-family: pixel;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 6px;
   opacity: 0;
   pointer-events: none;
@@ -801,11 +801,11 @@ form button:active {
 
   /* Headings scale */
   h1 {
-    font-size: 1.6em;
+    font-size: 1.3em;
   }
 
   h2 {
-    font-size: 1.3em;
+    font-size: 1em;
   }
 
   /* Mobile profile fix: smaller & aligned with menu */
