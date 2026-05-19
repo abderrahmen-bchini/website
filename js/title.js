@@ -1,7 +1,6 @@
 // title.js
 const messages = [
   "💻 Abderrahmen Bchini",
-  "⚡ Full Stack Developer",
   "🚀 Building Cool Projects",
   "🧠 AI & Cybersecurity",
   "🔥 Welcome To My Portfolio"
