@@ -95,9 +95,8 @@ a:hover , button:hover ,nav:hover , .switch:hover , .knob:hover , .menu:hover , 
 }
 
 .profile {
-  position: absolute;
-  top: 0;
-  right: 0;
+  float: right;
+  margin-left: 20px;
   width: fit-content;
 
   display: flex;
@@ -794,9 +793,8 @@ form button:active {
     min-height: unset;
   }
 
-  /* Override absolute positioning — profile flows in header on mobile */
   .profile {
-    position: static;
+    float: none;
     width: auto;
     gap: 5px;
     align-items: center;
