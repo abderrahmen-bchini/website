@@ -12,8 +12,8 @@ This is the codebase for my personal portfolio website. I created this website t
 - **Smooth Animations**: Enhances user experience with subtle transitions and effects.
 
 ## Technologies Used
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript (for interactivity and background animation , theme switching)
 
 ## Installation
