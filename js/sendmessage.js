@@ -1,49 +1,58 @@
-const form = document.getElementById("contact-form");
-const toast = document.getElementById("form-toast");
-const input = form.message;
+// =========================
+// CONTACT FORM
+// =========================
+(() => {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
 
-function showToast(text, type = "success") {
-  toast.textContent = text;
-  toast.className = `form-toast show ${type}`;
+  const toast = document.getElementById("form-toast");
+  const input = form.message;
+  const button = form.querySelector("button");
+  let hideTimer = null;
 
-  setTimeout(() => {
-    toast.classList.remove("show");
-  }, 3000);
-}
+  function showToast(text, type = "success") {
+    toast.textContent = text;
+    toast.className = `form-toast show ${type}`;
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const message = input.value.trim();
-
-  // Custom validation (no browser popup)
-  if (!message) {
-    input.classList.add("error");
-    showToast("Message cannot be empty", "error");
-    return;
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
   }
 
-  input.classList.remove("error");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  try {
-    const res = await fetch("/api/send-message", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message }),
-    });
+    const message = input.value.trim();
 
-    if (!res.ok) throw new Error();
+    if (!message) {
+      input.classList.add("error");
+      showToast("Message cannot be empty", "error");
+      return;
+    }
 
-    // Clear BEFORE showing success
-    form.reset();
-    showToast("Message sent successfully ✔", "success");
+    input.classList.remove("error");
+    button.disabled = true;
 
-  } catch {
-    showToast("Failed to send message", "error");
-  }
-});
+    try {
+      const res = await fetch("/api/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message }),
+      });
 
-// Remove error glow while typing
-input.addEventListener("input", () => {
-  input.classList.remove("error");
-});
+      if (!res.ok) throw new Error();
+
+      form.reset();
+      showToast("Message sent ✔");
+    } catch {
+      showToast("Failed to send message", "error");
+    } finally {
+      button.disabled = false;
+    }
+  });
+
+  input.addEventListener("input", () => {
+    input.classList.remove("error");
+  });
+})();

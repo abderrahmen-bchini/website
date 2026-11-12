@@ -6,31 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
     content="Abderrahmen Bchini — Software engineering student interested in cybersecurity. Portfolio of projects, skills, and experience.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="png/jpg" href="pics/laptop.png">
+  <link rel="icon" type="image/png" href="pics/laptop.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <canvas id="pixel-bg"></canvas>
+  <div class="bg-grid" aria-hidden="true"></div>
 
   <header class="header">
     <div class="dropdown-menu">
-      <button class="trigger" aria-haspopup="true" aria-expanded="false">
-        <svg class="trigger-icon" viewBox="0 0 16 20" aria-hidden="true">
-          <rect x="0" y="0" width="4" height="4" />
-          <rect x="4" y="4" width="4" height="4" />
-          <rect x="8" y="8" width="4" height="4" />
-          <rect x="4" y="12" width="4" height="4" />
-          <rect x="0" y="16" width="4" height="4" />
-        </svg>
+      <button class="trigger" aria-haspopup="true" aria-expanded="false" aria-label="Open menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
 
       <ul class="menu">
         <li class="menu-item">
           <span>Theme</span>
           <label class="switch">
-            <input type="checkbox" id="themetoggle">
+            <input type="checkbox" id="themetoggle" aria-label="Toggle light mode">
             <span class="track">
               <span class="knob"></span>
             </span>
@@ -40,430 +38,319 @@
         <li class="menu-item"><a href="#about">About</a></li>
         <li class="menu-item"><a href="#projects">Projects</a></li>
         <li class="menu-item"><a href="#skills">Skills</a></li>
-        <li class="menu-item"><a href="#contacts">Contacts</a></li>
+        <li class="menu-item"><a href="#contacts">Contact</a></li>
       </ul>
     </div>
-
   </header>
 
-  <div class="profile">
-    <img src="pics/profile_picture.png" alt="Abderrahmen Bchini Profile" class="profile-img">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Abderrahmen Bchini</h1>
+      <p class="hero-tagline">Software engineering student, focused on security and systems</p>
+      <p class="hero-sub">
+        I build and break things to understand how they work — self-hosted infrastructure, hardened Linux
+        environments, and network-level privacy tooling. Currently open to job opportunities and scholarship
+        programs.
+      </p>
 
-    <nav class="contacts">
-      <a href="https://github.com/abderrahmen-bchini" target="_blank" aria-label="GitHub" class="social-link">
-        <i class="fa-brands fa-github"></i>
-      </a>
-
-      <a href="mailto:abderrahmen.bchini24@gmail.com" target="_blank" aria-label="Email" class="social-link">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-
-      <a href="https://www.linkedin.com/in/abderrahmen-bchini-33957a388/" target="_blank" aria-label="LinkedIn"
-        class="social-link">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-    </nav>
-    <a href="CV-RESUME.pdf" download="CV-RESUME.pdf">
-      <button class="download-button"> <strong>DOWNLOAD CV </strong> ⬇</button>
-    </a>
-  </div>
-
-  <h1 id="about">About {</h1>
-
-  <div class="about">
-    <h3 style="font-weight: bold;">I'm Abderrahmen Bchini</h3>
-    <p>A software engineering student with a genuine interest in cybersecurity , I enjoy understanding how systems work
-      under the hood and building practical projects that solve real problems.</p>
-    <p>Currently open to job opportunities and scholarship programs.</p>
-  </div>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2 style="font-weight: bold;">Education :</h2>
-  </div>
-
-  <div class="vertical-line">
-    <ul>
-      <li><strong>Bachelor’s Degree in Software Engineering</strong> — MUST University (2023 – 2026)</li>
-      <li><strong>Baccalauréat in Mathematics</strong> — Tunis, Tunisia (2023)</li>
-    </ul>
-  </div>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2 style="font-weight: bold;">Projects</h2>
-  </div>
-
-  <div class="vertical-line">
-    <ul>
-      <li><strong>Student Quiz Platform</strong></li>
-    </ul>
-  </div>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2 style="font-weight: bold;">Experience</h2>
-  </div>
-
-  <div class="vertical-line">
-    <ul>
-      <li><strong>High School Tutor — Pratik.tn</strong> (2023 – 2024)</li>
-      <li><strong>Dashboard Platform — E-Commerce Company, Internship</strong> (Jul – Aug 2025)</li>
-      <li><strong>Development Team — Wifak Bank, Internship</strong> (Feb – Jun 2026)</li>
-    </ul>
-  </div>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2>Certificates :</h2>
-  </div>
-
-  <div class="vertical-line-container">
-    <div class="vertical-line">
-      <ul>
-        <li>Cybersecurity & IT</li>
-        <ol>
-          <li><strong>Cisco Networking Academy: Cybersecurity Essentials</strong> (Apr 2026)</li>
-        </ol>
-        <li>Writing, Communication & Personal Development</li>
-        <ol>
-          <li><strong>Writing Skills for Engineering Leaders</strong> (Feb 2026)</li>
-        </ol>
-        <li>Business Management & Entrepreneurship</li>
-        <ol>
-          <li><strong>Entrepreneurship I: Laying the Foundation</strong></li>
-          <li><strong>Entrepreneurship II: Preparing for Launch</strong></li>
-        </ol>
-        <li>Humanities & Social Sciences</li>
-        <ol>
-          <li><strong>Social Psychology</strong> (Ongoing)</li>
-        </ol>
-      </ul>
-    </div>
-
-    <div class="circle-container">
-      <div class="outer-circle">
-        <div class="inner-circle"></div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">See my work</a>
+        <a class="btn" href="CV-RESUME.pdf" download="CV-RESUME.pdf">
+          <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
+        </a>
       </div>
-      <h2>Languages :</h2>
+
+      <nav class="contacts" aria-label="Social links">
+        <a href="https://github.com/abderrahmen-bchini" target="_blank" rel="noopener" aria-label="GitHub"
+          class="social-link">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:abderrahmen.bchini24@gmail.com" aria-label="Email" class="social-link">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abderrahmen-bchini-33957a388/" target="_blank" rel="noopener"
+          aria-label="LinkedIn" class="social-link">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </nav>
     </div>
 
-    <div class="vertical-line-container">
-      <div class="vertical-line">
-        <ul>
-          <li><strong>English</strong></li>
-          <li><strong>French</strong></li>
-          <li><strong>Arabic</strong></li>
+    <div class="hero-media">
+      <img src="pics/profile_picture.png" alt="Abderrahmen Bchini" class="profile-img">
+    </div>
+  </section>
+
+  <main>
+    <section class="section" id="projects">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-belt">
+        <button class="belt-nav belt-prev" type="button" aria-label="Previous projects" disabled>
+          <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+
+        <div class="project-track" id="project-track" tabindex="0" role="region" aria-label="Projects carousel">
+        <article class="project-card">
+          <div class="project-media">
+            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+          </div>
+          <div class="project-body">
+            <h3>Student Quiz Platform</h3>
+            <p class="project-hook">Timed, category-based quizzes with secure authentication</p>
+            <p class="project-blurb">
+              A web platform where students log in, pick a category, and take timed quizzes. Built with
+              server-side input sanitization against SQL injection and hashed password storage from the start.
+            </p>
+            <ul class="chip-row">
+              <li class="chip">PHP</li>
+              <li class="chip">MySQL</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">Input sanitization</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <i class="fa-brands fa-linux" aria-hidden="true"></i>
+          </div>
+          <div class="project-body">
+            <h3>Arch Linux Configuration &amp; Automation</h3>
+            <p class="project-hook">A minimal Linux environment built from scratch, no guided installers</p>
+            <p class="project-blurb">
+              Set up the bootloader, system services, networking, and hardware drivers manually, then wrote Bash
+              scripts to automate environment setup, theme switching, package management, and battery monitoring.
+            </p>
+            <ul class="chip-row">
+              <li class="chip">Bash</li>
+              <li class="chip">systemd</li>
+              <li class="chip">Linux internals</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+          </div>
+          <div class="project-body">
+            <h3>Network Ad Blocking &amp; VPN</h3>
+            <p class="project-hook">Pi-hole DNS filtering that follows my devices off the home network</p>
+            <p class="project-blurb">
+              Turned a Raspberry Pi Zero 2 W into a network-wide ad blocker, then extended it with Tailscale so
+              every device stays filtered on external networks. Managed remotely over SSH with audited DNS logs.
+            </p>
+            <ul class="chip-row">
+              <li class="chip">Pi-hole</li>
+              <li class="chip">DNS</li>
+              <li class="chip">Tailscale</li>
+              <li class="chip">SSH</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <i class="fa-solid fa-cloud" aria-hidden="true"></i>
+          </div>
+          <div class="project-body">
+            <h3>Self-Hosted Cloud on Legacy Hardware</h3>
+            <p class="project-hook">Nextcloud file sync running on a laptop most people would throw away</p>
+            <p class="project-blurb">
+              Built the full stack — Apache, MariaDB, and DuckDNS for dynamic IP handling — then hardened it by
+              restricting database access to localhost, using least-privilege DB users, and scripting safe
+              startup and shutdown.
+            </p>
+            <ul class="chip-row">
+              <li class="chip">Nextcloud</li>
+              <li class="chip">Apache</li>
+              <li class="chip">MariaDB</li>
+              <li class="chip">DuckDNS</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <i class="fa-solid fa-film" aria-hidden="true"></i>
+          </div>
+          <div class="project-body">
+            <h3>Self-Hosted Media Streaming</h3>
+            <p class="project-hook">Moving from bare metal to containerized infrastructure</p>
+            <p class="project-blurb">
+              A Jellyfin streaming server deployed with Docker Compose — persistent storage volumes, container
+              networking, and remote access secured through reverse proxy routing with minimal exposed ports.
+            </p>
+            <ul class="chip-row">
+              <li class="chip">Docker</li>
+              <li class="chip">Jellyfin</li>
+              <li class="chip">Reverse proxy</li>
+            </ul>
+          </div>
+        </article>
+        </div>
+
+        <button class="belt-nav belt-next" type="button" aria-label="Next projects">
+          <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2 class="section-title">Background</h2>
+
+      <div class="timeline-group">
+        <h3>Education</h3>
+        <ul class="timeline">
+          <li>
+            <strong>Bachelor's Degree in Software Engineering</strong>
+            <span class="meta">MUST University · 2023–2026</span>
+          </li>
+          <li>
+            <strong>Baccalauréat in Mathematics</strong>
+            <span class="meta">Tunis, Tunisia · 2023</span>
+          </li>
         </ul>
       </div>
-      <div class="down-arrow">
-        <img src="pics/arrow_back_2_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" class="end-arrow"
-          alt="down arrow css element">
-        <img src="pics/light_arrow_back_2_24dp_2D2B29_FILL0_wght400_GRAD0_opsz24.svg" class="end-arrow"
-          alt="down arrow css element">
+
+      <div class="timeline-group">
+        <h3>Experience</h3>
+        <ul class="timeline">
+          <li>
+            <strong>Development Team — Wifak Bank</strong>
+            <span class="meta">Internship · Feb–Jun 2026</span>
+          </li>
+          <li>
+            <strong>Dashboard Platform — E-Commerce Company</strong>
+            <span class="meta">Internship · Jul–Aug 2025</span>
+          </li>
+          <li>
+            <strong>High School Tutor — Pratik.tn</strong>
+            <span class="meta">2023–2024</span>
+          </li>
+        </ul>
       </div>
-    </div>
-  </div>
 
-  <h1>};</h1>
-  <br>
+      <div class="timeline-group">
+        <h3>Certificates</h3>
+        <ul class="timeline">
+          <li>
+            <strong>Cybersecurity Essentials</strong>
+            <span class="meta">Cisco Networking Academy · Apr 2026</span>
+          </li>
+          <li>
+            <strong>Writing Skills for Engineering Leaders</strong>
+            <span class="meta">Feb 2026</span>
+          </li>
+          <li>
+            <strong>Entrepreneurship I &amp; II</strong>
+            <span class="meta">Laying the Foundation · Preparing for Launch</span>
+          </li>
+          <li>
+            <strong>Social Psychology</strong>
+            <span class="meta">Ongoing</span>
+          </li>
+        </ul>
+      </div>
 
-  <span id="projects"></span>
-  <h1>Projects {</h1>
+      <div class="timeline-group">
+        <h3>Languages</h3>
+        <ul class="chip-row">
+          <li class="chip">English</li>
+          <li class="chip">French</li>
+          <li class="chip">Arabic</li>
+        </ul>
+      </div>
+    </section>
 
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2>Quiz Platform :</h2>
-  </div>
+    <section class="section" id="skills">
+      <h2 class="section-title">Skills</h2>
 
-  <div class="vertical-line-container">
-    <div class="vertical-line">
-      <ul>
-        <li class="project">
-          <p>
-            A <strong>web-based quiz platform</strong> where users can log in, choose a category, and take timed
-            quizzes.
-            Built for my second-year web development module.
-          </p>
-        </li>
+      <div class="skills-grid">
+        <div class="skills-group">
+          <h3>Technical</h3>
+          <ul class="chip-row">
+            <li class="chip">TCP/IP</li>
+            <li class="chip">DNS</li>
+            <li class="chip">Routing &amp; subnetting</li>
+            <li class="chip">Wireshark</li>
+            <li class="chip">Cisco Packet Tracer</li>
+            <li class="chip">Linux administration</li>
+            <li class="chip">AWS</li>
+            <li class="chip">Python</li>
+            <li class="chip">C</li>
+            <li class="chip">Java</li>
+            <li class="chip">Bash</li>
+            <li class="chip">Hardware diagnostics</li>
+          </ul>
+        </div>
 
-        <li class="project">
-          <p>
-            Stack: <strong>HTML, CSS, JavaScript</strong> on the frontend, <strong>PHP and MySQL</strong> on the backend
-            for authentication and data storage.
-          </p>
-        </li>
-
-        <li class="project">
-          <p>
-            Security-conscious from the start — implemented <strong>server-side input sanitization</strong> against
-            SQL injection and <strong>password hashing</strong> for secure authentication.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2>Arch Linux Configuration & Automation :</h2>
-  </div>
-
-  <div class="vertical-line-container">
-    <div class="vertical-line">
-      <ul>
-        <li class="project">
-          <p>
-            A long-running personal project — building a <strong>minimal, fully custom Arch Linux environment</strong>
-            from scratch.
-          </p>
-        </li>
-
-        <li class="project">
-          <p>
-            Set everything up manually: <strong>bootloader, system services, networking, and hardware drivers</strong> —
-            no guided installers.
-          </p>
-        </li>
-
-        <li class="project">
-          <p>
-            Wrote <strong>Bash scripts</strong> to automate tasks like environment setup, theme switching, package
-            management, and battery monitoring. Gave me a solid understanding of <strong>Linux internals,
-              process management, and file systems</strong>.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2>Raspberry Pi Network Ad Blocking & VPN :</h2>
-  </div>
-
-  <div class="vertical-line-container">
-    <div class="vertical-line">
-      <ul>
-        <li class="project">
-          <p>
-            Turned a <strong>Raspberry Pi Zero 2 W</strong> into a network-wide ad blocker using
-            <strong>Pi-hole</strong> as a custom DNS server — blocking ads, trackers, and telemetry
-            across every device on the network.
-          </p>
-        </li>
-
-        <li class="project">
-          <p>
-            Configured router DNS settings, maintained custom blocklists, and monitored DNS query logs
-            to keep traffic clean and auditable.
-          </p>
-        </li>
-
-        <li class="project">
-          <p>
-            Extended the setup beyond home by integrating <strong>Tailscale VPN</strong>, so all my
-            devices stay protected by Pi-hole filtering even on external networks. Managed everything
-            remotely over <strong>SSH</strong>.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2>Self-Hosted Cloud Infrastructure on Legacy Hardware</h2>
-  </div>
-
-  <div class="vertical-line-container">
-    <div class="vertical-line">
-      <ul>
-        <li class="project">
-          <p>
-            Repurposed an old, underpowered laptop into a fully functional <strong>self-hosted cloud server</strong>
-            running <strong>Nextcloud</strong> — file storage, sync, and sharing on hardware most people would throw
-            away.
-          </p>
-        </li>
-
-        <li class="project">
-          <p>
-            Set up the full server stack: <strong>Apache</strong> as the web server, <strong>MariaDB</strong> as the
-            database, and <strong>DuckDNS</strong> to handle dynamic IP changes so the server stays reachable remotely
-            without a static IP.
-          </p>
-        </li>
-
-        <li class="project">
-          <p>
-            Hardened the setup by restricting database access to localhost, using least-privilege DB users, and writing
-            safe startup/shutdown scripts to prevent data corruption. Solid grounding in
-            <strong>Linux server admin, DNS, web server deployment, and database security</strong>.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2>Self-Hosted Media Streaming Infrastructure</h2>
-  </div>
-  <div class="vertical-line-container">
-    <div class="vertical-line">
-      <ul>
-        <li class="project">
-          <p>
-            Built a self-hosted media streaming server using <strong>Jellyfin</strong>, deployed with
-            <strong>Docker and Docker Compose</strong> — a step up from my bare-metal Nextcloud setup, moving into
-            containerized infrastructure.
-          </p>
-        </li>
-
-        <li class="project">
-          <p>
-            Configured persistent storage volumes, container networking, and automated service management for
-            stable media indexing and streaming performance.
-          </p>
-        </li>
-
-        <li class="project">
-          <p>
-            Secured remote access through <strong>reverse proxy routing</strong> and <strong>DuckDNS</strong>, with
-            services isolated by containerization, minimal exposed ports, and environment configs kept off the
-            public-facing layer.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="down-arrow">
-    <img src="pics/arrow_back_2_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" class="end-arrow"
-      alt="down arrow css element">
-    <img src="pics/light_arrow_back_2_24dp_2D2B29_FILL0_wght400_GRAD0_opsz24.svg" class="end-arrow"
-      alt="down arrow css element">
-  </div>
-
-  <h1>};</h1>
-
-  <span id="skills"></span>
-  <h1>Skills {</h1>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2>Soft Skills :</h2>
-  </div>
-
-  <div class="vertical-line-container">
-    <div class="vertical-line">
-      <ul>
-        <li><strong>Project Management</strong> — breaking tasks down, setting priorities, and delivering on time</li>
-        <li><strong>Communication</strong> — writing clearly and explaining technical ideas to non-technical people</li>
-        <li><strong>Teamwork</strong> — contributing to shared goals and working well in group settings</li>
-        <li><strong>Problem Solving</strong> — breaking down complex issues and finding practical solutions</li>
-        <li><strong>Adaptability</strong> — picking up new tools and technologies quickly</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="circle-container">
-    <div class="outer-circle">
-      <div class="inner-circle"></div>
-    </div>
-    <h2>Technical Skills :</h2>
-  </div>
-
-  <div class="vertical-line-container">
-    <div class="vertical-line">
-      <ul>
-        <li><strong>Networking</strong> — TCP/IP, DNS, routing, subnetting, and network protocols</li>
-        <li><strong>Cybersecurity Tools</strong> — Wireshark, Cisco Packet Tracer, network traffic analysis</li>
-        <li><strong>Operating Systems</strong> — Linux (primary), Windows; comfortable with CLI and system
-          administration</li>
-        <li><strong>Cloud Services</strong> — AWS; deploying and managing cloud infrastructure</li>
-        <li><strong>Programming & Scripting</strong> — Python, C, Java, Bash</li>
-        <li><strong>Hardware & IT</strong> — hardware diagnostics, laptop/desktop disassembly, component-level
-          troubleshooting</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="down-arrow">
-    <img src="pics/arrow_back_2_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" class="end-arrow"
-      alt="down arrow css element">
-    <img src="pics/light_arrow_back_2_24dp_2D2B29_FILL0_wght400_GRAD0_opsz24.svg" class="end-arrow"
-      alt="down arrow css element">
-  </div>
-
-  <h1>};</h1>
+        <div class="skills-group">
+          <h3>Working style</h3>
+          <ul class="chip-row">
+            <li class="chip">Project management</li>
+            <li class="chip">Technical communication</li>
+            <li class="chip">Teamwork</li>
+            <li class="chip">Problem solving</li>
+            <li class="chip">Adaptability</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <div id="shortcut-toast" class="shortcut-toast">
-    💡 Press "h" to see keyboard shortcuts!
+    Press <kbd>h</kbd> to see keyboard shortcuts
   </div>
 
   <div id="shortcut-panel" class="shortcut-panel" aria-hidden="true">
     <div class="shortcut-window">
-      <h2>Keyboard Shortcuts</h2>
+      <h2>Keyboard shortcuts</h2>
       <ul>
-        <li><kbd>t</kbd> — Toggle theme</li>
-        <li><kbd>Shift</kbd> + <kbd>↑</kbd> — Scroll to top</li>
-        <li><kbd>Shift</kbd> + <kbd>↓</kbd> — Scroll to bottom</li>
-        <li><kbd>h</kbd> — Open shortcuts</li>
-        <li><kbd>Esc</kbd> — Close panel</li>
+        <li><kbd>t</kbd> Toggle theme</li>
+        <li><kbd>Shift</kbd> + <kbd>↑</kbd> Scroll to top</li>
+        <li><kbd>Shift</kbd> + <kbd>↓</kbd> Scroll to bottom</li>
+        <li><kbd>h</kbd> Open shortcuts</li>
+        <li><kbd>Esc</kbd> Close panel</li>
       </ul>
     </div>
   </div>
-  <div class="footer-container" id="contacts">
-    <footer class="footerclass">
+
+  <footer class="footer-container" id="contacts">
+    <div class="footer-inner">
+      <h2 class="section-title">Get in touch</h2>
+
       <div class="footer-icons">
-        <a href="https://github.com/abderrahmen-bchini" target="_blank" aria-label="GitHub" class="footer-link">
-          <i class="fa-brands fa-github"></i>
-        </a>
-
-        <a href="mailto:abderrahmen.bchini24@gmail.com" target="_blank" aria-label="Email" class="footer-link">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/abderrahmen-bchini-33957a388/" target="_blank" aria-label="LinkedIn"
+        <a href="https://github.com/abderrahmen-bchini" target="_blank" rel="noopener" aria-label="GitHub"
           class="footer-link">
-          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:abderrahmen.bchini24@gmail.com" aria-label="Email" class="footer-link">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/abderrahmen-bchini-33957a388/" target="_blank" rel="noopener"
+          aria-label="LinkedIn" class="footer-link">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
         </a>
       </div>
-      <br>
-      <p>Get in Touch</p>
+
       <form id="contact-form">
         <textarea class="input-field" name="message" placeholder="Write your message here..."></textarea>
-        <button>Send</button>
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <div id="form-toast" class="form-toast" role="status" aria-live="polite"></div>
       </form>
-      <div id="form-toast" class="form-toast"></div>
-      <div class="copyright">
-        <p>Copyright &copy;2026 | Designed by <span class="myname">Abderrahmen Bchini</span></p>
-      </div>
-    </footer>
-  </div>
 
-  <script type="module" src="js/main.js"></script>
+      <p class="copyright">© 2026 <span class="myname">Abderrahmen Bchini</span></p>
+    </div>
+  </footer>
+
+  <!-- Classic scripts (not modules) so the site also works opened via file:// -->
+  <script defer src="js/theme.js"></script>
+  <script defer src="js/shortcut.js"></script>
+  <script defer src="js/projects.js"></script>
+  <script defer src="js/sendmessage.js"></script>
+  <script defer src="js/title.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 
 </html>
