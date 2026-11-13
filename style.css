@@ -382,7 +382,7 @@ body.light .bg-grid {
 
 .profile-img {
   width: 260px;
-  height: 260px;
+  height: 280px;
   object-fit: cover;
   border-radius: 16px;
   border: 1px solid var(--border);

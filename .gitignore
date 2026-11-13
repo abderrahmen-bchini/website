@@ -1,4 +1,4 @@
 .env*
 API_KEY
 *.md
-screenshots/
+screenshot*/
