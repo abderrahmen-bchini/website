@@ -37,6 +37,22 @@
   });
 
   // =========================
+  // TOOLS SUBMENU (nested dropdown)
+  // Hover opens it on desktop (CSS); the chevron click covers touch.
+  // =========================
+  const submenuItem = dropdown.querySelector(".has-submenu");
+  const submenuTrigger = submenuItem && submenuItem.querySelector(".submenu-trigger");
+
+  if (submenuTrigger) {
+    submenuTrigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      const isOpen = submenuItem.classList.toggle("open");
+      submenuTrigger.setAttribute("aria-expanded", String(isOpen));
+    });
+  }
+
+  // =========================
   // CLOSE DROPDOWN (OUTSIDE CLICK)
   // Clicks inside the menu (e.g. the theme switch) must not close it,
   // otherwise the menu vanishes the moment you reach for the toggle.
@@ -47,6 +63,11 @@
     if (dropdown.classList.contains("open")) {
       dropdown.classList.remove("open");
       trigger.setAttribute("aria-expanded", "false");
+
+      if (submenuItem) {
+        submenuItem.classList.remove("open");
+        submenuTrigger.setAttribute("aria-expanded", "false");
+      }
     }
   });
 
@@ -57,6 +78,11 @@
     if (e.key === "Escape" && dropdown.classList.contains("open")) {
       dropdown.classList.remove("open");
       trigger.setAttribute("aria-expanded", "false");
+
+      if (submenuItem) {
+        submenuItem.classList.remove("open");
+        submenuTrigger.setAttribute("aria-expanded", "false");
+      }
     }
   });
 })();

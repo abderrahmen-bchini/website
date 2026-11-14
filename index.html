@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Abderrahmen Bchini — Software engineering student interested in cybersecurity. Portfolio of projects, skills, and experience.">
+    content="Abderrahmen Bchini — Software engineering graduate interested in cybersecurity. Portfolio of projects, skills, and experience.">
   <link rel="icon" type="image/png" href="pics/laptop.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +21,7 @@
   <header class="header">
     <nav class="top-nav" aria-label="Primary">
       <a href="#" aria-current="page">Home</a>
-      <a href="tools/pdf-split.html">Tools</a>
+      <a href="tools/index.html">Tools</a>
       <a href="#contacts">Contact</a>
     </nav>
 
@@ -44,7 +44,17 @@
         <li class="menu-item"><a href="#about">About</a></li>
         <li class="menu-item"><a href="#projects">Projects</a></li>
         <li class="menu-item"><a href="#skills">Skills</a></li>
-        <li class="menu-item"><a href="tools/pdf-split.html">Tools</a></li>
+        <li class="menu-item has-submenu">
+          <a href="tools/index.html">Tools</a>
+          <button class="submenu-trigger" aria-haspopup="true" aria-expanded="false"
+            aria-label="Open tools submenu">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+          <ul class="submenu">
+            <li><a href="tools/pdf-split.html">PDF Split</a></li>
+            <li><a href="tools/fasterfetch.html">fasterfetch</a></li>
+          </ul>
+        </li>
         <li class="menu-item"><a href="#contacts">Contact</a></li>
       </ul>
     </div>
@@ -53,7 +63,7 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Abderrahmen Bchini</h1>
-      <p class="hero-tagline">Software engineering student, focused on security and systems</p>
+      <p class="hero-tagline">Software engineering graduate , focused on security and systems</p>
       <p class="hero-sub">
         I build and break things to understand how they work : self-hosted infrastructure, hardened Linux
         environments, and network-level privacy tooling. Currently open to job opportunities and scholarship
@@ -216,6 +226,30 @@
             <div class="project-links">
               <a href="tools/pdf-split.html">Try it live →</a>
               <a href="https://github.com/abderrahmen-bchini/pdf_split" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-media">
+            <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+          </div>
+          <div class="project-body">
+            <h3>fasterfetch</h3>
+            <p class="project-hook">A faster neofetch, written in C — now it runs on you</p>
+            <p class="project-blurb">
+              A zero-dependency system info tool: no subprocesses, it reads /proc and /sys directly and renders an
+              ASCII distro logo, themes, borders and usage bars. The browser edition fetches your own machine's
+              info live on this site.
+            </p>
+            <ul class="chip-row">
+              <li class="chip">C</li>
+              <li class="chip">Linux</li>
+              <li class="chip">zero-deps</li>
+            </ul>
+            <div class="project-links">
+              <a href="tools/fasterfetch.html">Try it live →</a>
+              <a href="https://github.com/abderrahmen-bchini/fasterfetch" target="_blank" rel="noopener">GitHub</a>
             </div>
           </div>
         </article>

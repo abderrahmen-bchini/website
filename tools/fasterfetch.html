@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="fasterfetch in your browser — a neofetch-style system info card for your own machine, powered by standard browser APIs. The original is a zero-dependency C CLI.">
+  <title>fasterfetch — Abderrahmen Bchini</title>
+  <link rel="icon" type="image/png" href="../pics/laptop.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="header">
+    <nav class="top-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="index.html" aria-current="page">Tools</a>
+      <a href="../index.html#contacts">Contact</a>
+    </nav>
+
+    <div class="dropdown-menu">
+      <button class="trigger" aria-haspopup="true" aria-expanded="false" aria-label="Open menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <ul class="menu">
+        <li class="menu-item">
+          <span>Theme</span>
+          <label class="switch">
+            <input type="checkbox" id="themetoggle" aria-label="Toggle light mode">
+            <span class="track">
+              <span class="knob"></span>
+            </span>
+          </label>
+        </li>
+
+        <li class="menu-item"><a href="../index.html">Home</a></li>
+        <li class="menu-item"><a href="../index.html#projects">Projects</a></li>
+        <li class="menu-item has-submenu">
+          <a href="index.html">Tools</a>
+          <button class="submenu-trigger" aria-haspopup="true" aria-expanded="false"
+            aria-label="Open tools submenu">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+          <ul class="submenu">
+            <li><a href="pdf-split.html">PDF Split</a></li>
+            <li><a href="fasterfetch.html">fasterfetch</a></li>
+          </ul>
+        </li>
+        <li class="menu-item"><a href="../index.html#contacts">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="section tool-page">
+      <h1 class="section-title">fasterfetch</h1>
+      <p class="tool-intro">
+        A <strong>neofetch-style</strong> system info tool I wrote in C — zero dependencies, no subprocesses, it reads
+        <code>/proc</code> and <code>/sys</code> directly. This page is its browser edition: it fetches
+        <strong>your</strong> machine's info using standard browser APIs and renders it in the same style.
+      </p>
+      <p class="tool-privacy">
+        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+        Everything runs in your browser. No IP lookup, no geolocation, no network calls — nothing is stored or sent
+        anywhere.
+      </p>
+
+      <div class="ff-terminal" id="ff-terminal" aria-label="fasterfetch output"></div>
+
+      <div class="ff-themes" id="ff-themes" hidden>
+        <span class="ff-themes-label">$ fasterfetch -t</span>
+        <button type="button" class="ff-theme-btn" data-theme="default" aria-pressed="true">default</button>
+        <button type="button" class="ff-theme-btn" data-theme="nord" aria-pressed="false">nord</button>
+        <button type="button" class="ff-theme-btn" data-theme="dracula" aria-pressed="false">dracula</button>
+        <button type="button" class="ff-theme-btn" data-theme="gruvbox" aria-pressed="false">gruvbox</button>
+        <button type="button" class="ff-theme-btn" data-theme="catppuccin" aria-pressed="false">catppuccin</button>
+        <button type="button" class="ff-theme-btn" data-theme="amber" aria-pressed="false">amber</button>
+      </div>
+
+      <p class="tool-cli">
+        This is the real thing's little sibling — the original is a zero-dependency
+        <a href="https://github.com/abderrahmen-bchini/fasterfetch" target="_blank" rel="noopener">C CLI on
+          GitHub</a>, with distro logos, themes, borders and a JSON config. ( Don't forget to star the repo 🙄 )
+      </p>
+    </section>
+  </main>
+
+  <div id="shortcut-panel" class="shortcut-panel" aria-hidden="true">
+    <div class="shortcut-window">
+      <h2>Keyboard shortcuts</h2>
+      <ul>
+        <li><kbd>t</kbd> Toggle theme</li>
+        <li><kbd>Shift</kbd> + <kbd>↑</kbd> Scroll to top</li>
+        <li><kbd>Shift</kbd> + <kbd>↓</kbd> Scroll to bottom</li>
+        <li><kbd>h</kbd> Open shortcuts</li>
+        <li><kbd>Esc</kbd> Close panel</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer-container tool-footer">
+    <p class="copyright">© 2026 <span class="myname">Abderrahmen Bchini</span></p>
+  </footer>
+
+  <!-- Classic scripts (not modules) so the page also works opened via file:// -->
+  <script defer src="../js/theme.js"></script>
+  <script defer src="../js/shortcut.js"></script>
+  <script defer src="../js/fasterfetch.js"></script>
+</body>
+
+</html>
