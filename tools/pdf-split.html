@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="PDF Split — split a PDF into odd and even page files for manual duplex printing. Runs entirely in your browser, nothing is uploaded.">
+  <title>PDF Split — Abderrahmen Bchini</title>
+  <link rel="icon" type="image/png" href="../pics/laptop.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="header">
+    <nav class="top-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="#" aria-current="page">Tools</a>
+      <a href="../index.html#contacts">Contact</a>
+    </nav>
+
+    <div class="dropdown-menu">
+      <button class="trigger" aria-haspopup="true" aria-expanded="false" aria-label="Open menu">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </button>
+
+      <ul class="menu">
+        <li class="menu-item">
+          <span>Theme</span>
+          <label class="switch">
+            <input type="checkbox" id="themetoggle" aria-label="Toggle light mode">
+            <span class="track">
+              <span class="knob"></span>
+            </span>
+          </label>
+        </li>
+
+        <li class="menu-item"><a href="../index.html">Home</a></li>
+        <li class="menu-item"><a href="../index.html#projects">Projects</a></li>
+        <li class="menu-item"><a href="../index.html#contacts">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="section tool-page">
+      <h1 class="section-title">PDF Split</h1>
+      <p class="tool-intro">
+        Split a PDF into two files for double-sided printing on a single-sided printer: print the
+        <strong>odd</strong> file, put the stack back in flipped, then print the <strong>even</strong> file —
+        it's already in the right order, no reshuffling needed.
+      </p>
+      <p class="tool-privacy">
+        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+        Everything runs in your browser. Your file is never uploaded anywhere.
+      </p>
+
+      <div class="drop-zone" id="drop-zone" tabindex="0" role="button"
+        aria-label="Choose a PDF file or drag and drop one here">
+        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+        <p><strong>Drop a PDF here</strong> or click to choose a file</p>
+        <input type="file" id="pdf-input" accept="application/pdf,.pdf" hidden>
+      </div>
+
+      <p class="tool-error" id="tool-error" role="alert" hidden></p>
+
+      <div class="tool-result" id="tool-result" hidden>
+        <p class="tool-filename" id="tool-filename"></p>
+
+        <div class="tool-downloads">
+          <a class="btn btn-primary" id="download-odd" download>
+            <i class="fa-solid fa-download" aria-hidden="true"></i> <span>Odd pages</span>
+          </a>
+          <a class="btn" id="download-even" download>
+            <i class="fa-solid fa-download" aria-hidden="true"></i> <span>Even pages</span>
+          </a>
+          <a class="btn" id="download-both" download>
+            <i class="fa-solid fa-file-zipper" aria-hidden="true"></i> <span>Both (.zip)</span>
+          </a>
+        </div>
+
+        <ol class="tool-steps" id="tool-steps">
+          <li>Print the <strong>odd pages</strong> file.</li>
+          <li>Take the printed stack and put it back in the paper tray, flipped onto its back.</li>
+          <li>Print the <strong>even pages</strong> file — the pages inside are already reordered to match.</li>
+        </ol>
+      </div>
+
+      <p class="tool-cli">
+        Prefer the terminal? The same tool exists as a
+        <a href="https://github.com/abderrahmen-bchini/pdf_split" target="_blank" rel="noopener">Python CLI on
+          GitHub</a>.
+      </p>
+    </section>
+  </main>
+
+  <div id="shortcut-panel" class="shortcut-panel" aria-hidden="true">
+    <div class="shortcut-window">
+      <h2>Keyboard shortcuts</h2>
+      <ul>
+        <li><kbd>t</kbd> Toggle theme</li>
+        <li><kbd>Shift</kbd> + <kbd>↑</kbd> Scroll to top</li>
+        <li><kbd>Shift</kbd> + <kbd>↓</kbd> Scroll to bottom</li>
+        <li><kbd>h</kbd> Open shortcuts</li>
+        <li><kbd>Esc</kbd> Close panel</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer-container tool-footer">
+    <p class="copyright">© 2026 <span class="myname">Abderrahmen Bchini</span></p>
+  </footer>
+
+  <!-- Classic scripts (not modules) so the page also works opened via file:// -->
+  <script defer src="../js/vendor/pdf-lib.min.js"></script>
+  <script defer src="../js/vendor/fflate.min.js"></script>
+  <script defer src="../js/theme.js"></script>
+  <script defer src="../js/shortcut.js"></script>
+  <script defer src="../js/pdfsplit.js"></script>
+</body>
+
+</html>
